@@ -197,7 +197,8 @@ namespace Fission {
                 && (!z || z == settings.sizeZ - 1);
               break;
             case Cryotheum:
-              isActive(x, y, z) = countNeighbors(Cell, x, y, z) >= 2;
+              isActive(x, y, z) = countNeighbors(Cell, x, y, z) >= 2
+                && countActiveNeighbors(Moderator, x, y, z) ;
           }
         }
       }
